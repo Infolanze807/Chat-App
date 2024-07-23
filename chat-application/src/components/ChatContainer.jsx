@@ -9,7 +9,7 @@ import socketIOClient from "socket.io-client";
 
 const ChatContainer = () => {
   const [user, setUser] = useState(localStorage.getItem("user"));
-  const socketio = socketIOClient("chat-app-xnk1.vercel.app");
+  const socketio = socketIOClient("https://chat-app-xnk1.vercel.app/");
   const [chats, setChats] = useState([]);
   // console.log("chats", chats)
 

@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "chat-app-sepia-eight-66.vercel.app", credentials: true 
+        origin: "https://chat-app-sepia-eight-66.vercel.app/", credentials: true 
     }
 });
 
