@@ -50,10 +50,10 @@ const ChatContainer = () => {
   };
 
   return (
-    <div className="lg:px-10 md:px-8 px-4 py-5">
+    <div className="">
       {user ? (
-        <div>
-          <div className="flex items-center justify-between">
+        <div className="">
+          <div className="flex items-center justify-between bg-slate-100 lg:px-10 md:px-8 px-4 py-5">
             <div>Username: {user}</div>
             <div className="flex items-center justify-center gap-3">
               <div>

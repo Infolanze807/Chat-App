@@ -27,7 +27,7 @@ const ChatLists = ({ chats }) => {
   }
 
   return (
-    <div className="py-10">
+    <div className="py-10 lg:px-10 md:px-8 px-4">
       {chats.map((chat, index) => {
         if (chat.user === user) {
             return (

@@ -11,7 +11,7 @@ const InputText = ({ addMessage }) => {
 
   return (
     <div className=''>
-      <div className=''>
+      <div className='lg:px-10 md:px-8 px-4 py-5'>
         <div className='flex items-center gap-2 justify-center'>
           <textarea 
             onChange={(e) => setMessage(e.target.value)} 
