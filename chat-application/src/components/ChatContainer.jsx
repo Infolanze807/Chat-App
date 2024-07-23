@@ -5,21 +5,18 @@ import InputText from "./InputText";
 import UserLogin from "./UserLogin";
 import socketIOClient from "socket.io-client";
 
-// Create the socket connection outside of the component
-
 const ChatContainer = () => {
   const [user, setUser] = useState(localStorage.getItem("user"));
-  const socketio = socketIOClient("https://chat-app-xnk1.vercel.app/");
+  const socketio = socketIOClient("https://chat-app-xnk1.vercel.app", {
+    withCredentials: true
+  });
   const [chats, setChats] = useState([]);
-  // console.log("chats", chats)
 
   useEffect(() => {
-    // Set up the socket event listener only once
     socketio.on("chat", (receivedChat) => {
       setChats((prevChats) => [...prevChats, receivedChat]);
     });
 
-    // Clean up the event listener on component unmount
     return () => {
       socketio.off("chat");
     };
